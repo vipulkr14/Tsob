@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5ac113d009f96a2860e591ba"},"year":-480,"name":"Lumbini","type":"city","info":"Buddha was born.","Lat":27.6792,"Lang":83.507,"moreinfo":""}
+{"_id":{"$oid":"5ac116c909f96a2860e591bd"},"year":-445,"name":"Bodh Gaya","type":"city","info":"Buddha attains enlightment!","Lat":24.6961,"Lang":84.987,"moreinfo":""}
+{"_id":{"$oid":"5ac1172409f96a2860e591be"},"year":-445,"name":"Sarnath","type":"city","info":"First sangha is formed.","Lat":25.3763,"Lang":83.0227,"moreinfo":""}
+{"_id":{"$oid":"5ac39987cd59964901b33abf"},"year":-440,"name":"India","type":"country","info":"Early Sangha are formed.","countryid":"[\"IND\",\"NPL\",\"BGD\"]","Lat":27.0,"Lang":83.0,"moreinfo":""}
+{"_id":{"$oid":"5ac3b443cd59964901b33ac1"},"year":-400,"name":"Kushinagar","type":"city","info":"Buddha dies.","Lat":26.7399,"Lang":83.887,"moreinfo":""}
+{"_id":{"$oid":"5ac3b4b5cd59964901b33ac2"},"year":-250,"name":"Sri Lanka","type":"country","info":"Buddhism spreads to Sri Lanka","countryid":"LKA","Lat":7.0,"Lang":80.0,"moreinfo":""}
+{"_id":{"$oid":"5ac3b5e1cd59964901b33ac3"},"year":-240,"name":"South East Asia","type":"country","info":"Buddhism spreads to South East Asia.","countryid":"[\"MMR\",\"THA\",\"KHM\",\"LAO\",\"VNM\",\"MYS\",\"IDN\"]","Lat":14.0,"Lang":108.0,"moreinfo":""}
+{"_id":{"$oid":"5ac3bae8cd59964901b33ac4"},"year":-230,"name":"Central Asia","type":"country","info":"Buddhism Spreads to Central Asia.","countryid":"[\"PAK\",\"AFG\",\"KAZ\",\"TKM\",\"KGZ\",\"UZB\",\"TJK\"]","Lat":48.0196,"Lang":66.9237,"moreinfo":""}
+{"_id":{"$oid":"5ac3bdf8cd59964901b33ac5"},"year":100,"name":"East Asia","type":"country","info":"Buddhism spreads to East Asia.","countryid":"[\"CHN\",\"TWN\",\"KOR\",\"PRK\",\"JPN\"]","Lat":46.0,"Lang":103.0,"moreinfo":""}
+{"_id":{"$oid":"5ac3c805cd59964901b33ac6"},"year":700,"name":"Tibet","type":"country","info":"Buddhism Spreads to Tibet and Bhutan.","countryid":"[\"TIB\",\"BTN\"]","Lat":30.0,"Lang":88.0,"moreinfo":""}
