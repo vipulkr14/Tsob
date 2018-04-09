@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo|Kaushan+Script|Playball');
+
+
+
+a {
+  color: #00B7FF;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+#mapid {
+  height: 400px;
+  margin-top: 10px;
+}
+#footerl {
+
+  padding: 10px;
+
+}
+
+#stickyheader {
+  height: max-content;
+  background:palevioletred;
+  color:white;
+  margin-bottom: 10px;
+}
+#unstickyheader {
+  margin-bottom: 15px;
+}
+
+.bgimg{ height:3000px }
+#one.bgimg  {background-color: lightcoral}
+#two.bgimg  {background-color: coral}
+#showmain.container {height: 400px;}
+#foot.container{position: fixed;}
+
+
+#chead {
+  font-family: 'Berkshire Swash', cursive;
+  padding-top: 1ex;
+  text-align: center;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#description{
+  color: floralwhite;
+  text-align: left;
+  font-size: x-large;
+  font-family: 'Playball', cursive;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+* { box-sizing: border-box; }
+
+input, textarea {
+  margin: .8em auto;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+
+  display: block;
+  width: 280px;
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn {
+  width: 140px;
+  display: inline-block;
+
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
+
+
+#info {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+#info:hover { background: #666; }
+#info:active { background: #444; }
+
+#infoForm {
+  display: none;
+
+  border: 6px solid salmon;
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #23272b;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+
+}
+
+#pgbtn {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}

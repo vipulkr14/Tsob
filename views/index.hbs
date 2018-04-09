@@ -1,0 +1,102 @@
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto">
+                    <div class="row text-white">
+                        <div class="container">
+                            <h1 id="chead">{{title}}</h1></div>
+                    </div>
+                    <div class="container">
+                    <div class="row"> <div class="col-sm-8"><div id="mapid"></div></div>
+                        <script src="/javascripts/countries.js"></script>
+                        <script src="/javascripts/mapbox.js"></script>
+                        <script src="/javascripts/mapelement.js" result="{{results}}"></script>
+                        <div class="col-sm-4" id="content" onscroll="mapelementfunc()" style="Width: available; height: 400px; overflow: scroll">
+                            <div><div id="description"><div style="height:200px"><p>Buddhism has been the most influential religion in the oriental world. Let's see how it started and spread across the Asian Continent.<br><br></p></div></div><div style="height: 200px"></div>
+                            </div></div>
+                    </div>
+                    <div class="row text-white">
+                        <div id="pgbtn" onclick="refresh()">Start Over</div>
+                        <div id="info">Add Info</div>
+                        <div id="pgbtn" onclick="feedback()">Feedback</div>
+
+                        <div id="infoForm">
+
+                            <h3>Add More information</h3>
+                            <small>Help us with more information.</small>
+
+                            <form>
+                                <label>Select Place&nbsp&nbsp</label><select id="selectmenu"></select>
+                                <input placeholder="Year" id="year" type="text"/>
+                                <textarea placeholder="Details" id="minfo" required></textarea>
+                                <br>
+                                <button class="formBtn" onclick="updatefunc()">Submit</button>
+                                <button class="formBtn" type="reset" >Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" res="{{results}}">
+        var result=JSON.parse(document.currentScript.getAttribute('res'));//1
+
+        var l;
+        for (l = 0; l < result.length; l++) {
+            $('#description').append("<div style=\"height: 200px\"><p>"+result[l].year +":"+result[l].name+"<br>" + result[l].info + "</p></div>");
+            $('#selectmenu').append("<option value='"+result[l].name+"'>"+result[l].name+"</option>")
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(function() {
+
+            // contact form animations
+            $('#info').click(function() {
+                $('#infoForm').fadeToggle();
+                $('#mapid').fadeOut();
+            })
+            $(document).mouseup(function (e) {
+                var container = $("#infoForm");
+
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                        && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    container.fadeOut();
+                    $('#mapid').fadeIn();
+                }
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        function updatefunc(){
+            var sel = document.getElementById('selectmenu');
+            var name = sel.options[sel.selectedIndex].value;
+             var info="<br>"+document.getElementById('year').value+": "+document.getElementById('minfo').value;
+             console.log(name);
+             console.log(info);
+
+            if(info.length>0){
+              $.post(
+                    "/update",
+                    { key1: name, key2: info },
+                    function(data) {
+                        alert("Please Startover");
+                    }
+            );}
+
+        }
+    </script>
+    <script>
+        function refresh() {
+            location.reload();
+        }
+    </script>
+    <script>
+        function feedback() {
+            window.open('mailto:vipulelrey@gmail.com?subject=TSOB_FEEDBACK&body=body');
+        }
+    </script>
