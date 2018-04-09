@@ -1,7 +1,7 @@
 var express = require('express');
 var mongo = require('mongodb');
 var assert=require('assert');
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://heroku_867k5l8f:so40rohslitp2dmkf4lt7u553l@ds239359.mlab.com:39359/heroku_867k5l8f";
 
 var router = express.Router();
 var textin="Lorem Ipsum dolor sin tamet no es una magnifica conquistadoras en tu casa otras dias mi en es universitidad";
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     var resultArray = [];
     mongo.connect(url,function (err,db) {
         assert.equal(null,err);
-        var dbo=db.db('trave578');
+        var dbo=db.db('heroku_867k5l8f');
         dbo.collection("tsob").find({}).sort({year:1}).toArray(function(err, result) {
             if (err) throw err;
             //console.log(result);
@@ -35,7 +35,7 @@ router.post('/update',function (req,res,next) {
 
     mongo.connect(url,function (err,db) {
         assert.equal(null,err);
-        var dbo=db.db('trave578');
+        var dbo=db.db('heroku_867k5l8f');
         var myquery = { name:name };
         dbo.collection("tsob").find(myquery).toArray(function(err, result) {
             if (err) throw err;
