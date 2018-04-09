@@ -1,6 +1,5 @@
 var result=JSON.parse(document.currentScript.getAttribute('result')); //1
 var marker = [];
-var popupHTML="<br><a href='/addinfo'>Add more information</a><br><div id=\"contact\">Contact</div>";
 
 function style(feature) {
     return {
@@ -29,21 +28,21 @@ function mapelementfunc() {
     if (y>(i+1)*180) { //Lumbini
         marker[i].addTo(mymap);
         mymap.setView([result[i].Lat, result[i].Lang], 5);
-        marker[i].bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+        marker[i].bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
         i++;
 
 
         if (y>(i+1)*180) { //Bodh Gaya
             marker[i].addTo(mymap);
             mymap.setView([result[i].Lat, result[i].Lang], 5);
-            marker[i].bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+            marker[i].bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
             i++;
 
 
             if (y>(i+1)*180) { //Sarnath
                 marker[i].addTo(mymap);
                 mymap.setView([result[i].Lat, result[i].Lang], 5);
-                marker[i].bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                marker[i].bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                 i++;
 
                 if (y>(i+1)*180) { //India-Nepal-Bangladesh
@@ -51,13 +50,13 @@ function mapelementfunc() {
                         style: style,
                     }).addTo(mymap);
                     mymap.setView([result[i].Lat, result[i].Lang], 3);
-                    geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                    geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                     j++; i++;
 
                     if (y>(i+1)*180) { //Kushinagar
                         marker[i].addTo(mymap);
                         mymap.setView([result[i].Lat, result[i].Lang], 5);
-                        marker[i].bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                        marker[i].bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                         i++;
 
                         if (y>(i+1)*180) { //Sri Lanka
@@ -65,7 +64,7 @@ function mapelementfunc() {
                                 style: style,
                             }).addTo(mymap);
                             mymap.setView([result[i].Lat, result[i].Lang], 3);
-                            geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                            geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                             j++; i++;
 
                             if (y>(i+1)*180) { //South East Asia
@@ -73,7 +72,7 @@ function mapelementfunc() {
                                     style: style,
                                 }).addTo(mymap);
                                 mymap.setView([result[i].Lat, result[i].Lang], 3);
-                                geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                                geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                                 j++; i++;
 
                                 if (y>(i+1)*180) { //Central Asia
@@ -81,7 +80,7 @@ function mapelementfunc() {
                                         style: style,
                                     }).addTo(mymap);
                                     mymap.setView([result[i].Lat, result[i].Lang], 3);
-                                    geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                                    geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                                     j++; i++;
 
                                     if (y>(i+1)*180) { //East Asia
@@ -89,7 +88,7 @@ function mapelementfunc() {
                                             style: style,
                                         }).addTo(mymap);
                                         mymap.setView([result[i].Lat, result[i].Lang], 3);
-                                        geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                                        geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                                         j++; i++;
 
                                         if (y>(i+1)*180) { //Tibet-Bhutan
@@ -97,7 +96,7 @@ function mapelementfunc() {
                                                 style: style,
                                             }).addTo(mymap);
                                             mymap.setView([result[i].Lat, result[i].Lang], 3);
-                                            geojson.bindPopup("<b>"+result[i].name+"</b>"+popupHTML);
+                                            geojson.bindPopup("<b>"+result[i].name+"</b><br><a href=\""+result[i].moreinfo+"\">More information</a>");
                                             j++; i++;
 
                                         }
